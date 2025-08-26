@@ -36,3 +36,7 @@ in terminal
 
 pip install -r requirements.txt
 
+
+# create a Flask Application and frontend 
+
+load the model and predict with data coming from frontend ..
