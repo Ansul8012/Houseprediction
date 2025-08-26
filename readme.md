@@ -16,3 +16,23 @@ once tested and predicted your model is ready for unseen data ... test it with u
 ... 
 Now Pickle the model to file ( serialize it to byte stream so that this already trained model can be used anywhere without training it again and again....)
 
+
+# create a new env whenver starting project..
+
+python3 -m venv myenv
+
+python3 -m venv → Command to create virtual environment
+myenv → Name of your virtual environment folder (you can name it anything)
+
+# Activate the env
+
+source myenv/bin/activate
+
+
+# name the tools or dependices or framwworks required for this project to requirements.txt
+
+and then .... 
+in terminal
+
+pip install -r requirements.txt
+
