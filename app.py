@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Initialize Flask app
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # Load the pickled model
 with open('california_model.pkl', 'rb') as file:
