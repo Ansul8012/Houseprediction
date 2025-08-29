@@ -18,7 +18,7 @@ with open('scaler.pkl', 'rb') as file:
 
 @app.route('/')
 def home():
-    return render_template('Home.html')
+    return render_template('index.html')
 
 # Prediction route (API)
 
