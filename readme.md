@@ -40,3 +40,13 @@ pip install -r requirements.txt
 # create a Flask Application and frontend 
 
 load the model and predict with data coming from frontend ..
+
+
+# for deploment 
+
+Visual Explanation in Words
+You work on feature/UI.
+Push → Raise PR → CI/CD runs tests.
+Manager sees PR → merges (manual step).
+Merge triggers workflow → Docker image built → pushed.
+Render detects new image → automatically deploys → live app updated.
