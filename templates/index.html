@@ -11,133 +11,174 @@
     />
     <style>
       body {
-        background: linear-gradient(135deg, #00c6ff, #0072ff);
-        color: #fff;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
         font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      .container {
-        margin-top: 60px;
-        max-width: 650px;
-        background: #fff;
-        color: #333;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      .card {
+        border: none;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
       }
-      .heading {
-        text-align: center;
-        margin-bottom: 25px;
+      .card-header {
+        background: linear-gradient(135deg, #0072ff, #00c6ff);
+        color: #fff;
         font-weight: bold;
-        color: #0072ff;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.3rem;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+      }
+      .form-label {
+        font-weight: 500;
+        color: #333;
+      }
+      .form-control {
+        border-radius: 10px;
+        padding: 12px;
+        border: 1px solid #ddd;
+        transition: all 0.3s;
+      }
+      .form-control:focus {
+        border-color: #0072ff;
+        box-shadow: 0 0 8px rgba(0, 114, 255, 0.4);
       }
       .btn-custom {
         width: 100%;
-        background-color: #0072ff;
+        background: linear-gradient(135deg, #0072ff, #00c6ff);
         color: #fff;
         font-weight: bold;
-        border-radius: 8px;
-        transition: 0.3s;
+        border-radius: 10px;
+        padding: 12px;
+        transition: transform 0.2s ease-in-out;
+        border: none;
       }
       .btn-custom:hover {
-        background-color: #0056cc;
+        transform: scale(1.03);
+        background: linear-gradient(135deg, #0056cc, #0094ff);
       }
       .result-box {
-        margin-top: 20px;
-        padding: 15px;
+        margin-top: 25px;
+        padding: 18px;
         text-align: center;
-        border-radius: 8px;
-        background-color: #f8f9fa;
+        border-radius: 12px;
+        background: #f1f5ff;
         font-size: 1.2rem;
-        font-weight: bold;
+        font-weight: 600;
         color: #0072ff;
+        box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h2 class="heading">
-        California Housing Price Prediction Learning Model
-      </h2>
-      <form id="predictionForm">
-        <div class="mb-3">
-          <label class="form-label">Median Income</label>
-          <input
-            type="number"
-            step="0.0001"
-            class="form-control"
-            name="income"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">House Age</label>
-          <input type="number" class="form-control" name="house_age" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Average Rooms</label>
-          <input
-            type="number"
-            step="0.0001"
-            class="form-control"
-            name="avg_rooms"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Average Bedrooms</label>
-          <input
-            type="number"
-            step="0.0001"
-            class="form-control"
-            name="avg_bedrooms"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Population</label>
-          <input
-            type="number"
-            class="form-control"
-            name="population"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Average Occupancy</label>
-          <input
-            type="number"
-            step="0.0001"
-            class="form-control"
-            name="avg_occupancy"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Latitude</label>
-          <input
-            type="number"
-            step="0.0001"
-            class="form-control"
-            name="latitude"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Longitude</label>
-          <input
-            type="number"
-            step="0.0001"
-            class="form-control"
-            name="longitude"
-            required
-          />
-        </div>
+      <div class="card">
+        <div class="card-header">🏡 California Housing Price Prediction</div>
+        <div class="card-body">
+          <form id="predictionForm">
+            <div class="mb-3">
+              <label class="form-label">Median Income</label>
+              <input
+                type="number"
+                step="0.0001"
+                class="form-control"
+                name="income"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">House Age</label>
+              <input
+                type="number"
+                class="form-control"
+                name="house_age"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Average Rooms</label>
+              <input
+                type="number"
+                step="0.0001"
+                class="form-control"
+                name="avg_rooms"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Average Bedrooms</label>
+              <input
+                type="number"
+                step="0.0001"
+                class="form-control"
+                name="avg_bedrooms"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Population</label>
+              <input
+                type="number"
+                class="form-control"
+                name="population"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Average Occupancy</label>
+              <input
+                type="number"
+                step="0.0001"
+                class="form-control"
+                name="avg_occupancy"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Latitude</label>
+              <input
+                type="number"
+                step="0.0001"
+                class="form-control"
+                name="latitude"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Longitude</label>
+              <input
+                type="number"
+                step="0.0001"
+                class="form-control"
+                name="longitude"
+                required
+              />
+            </div>
 
-        <button type="submit" class="btn btn-custom">Predict Price</button>
-      </form>
+            <button type="submit" class="btn btn-custom">
+              🔮 Predict Price
+            </button>
+          </form>
 
-      <div class="result-box" id="result" style="display: none">
-        Predicted House Price: <span id="predictionValue"></span>
+          <div class="result-box" id="result" style="display: none">
+            Predicted House Price: <span id="predictionValue"></span>
+          </div>
+        </div>
       </div>
     </div>
 
